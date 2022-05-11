@@ -1,39 +1,64 @@
-<html>
-    <head>
-        <title>Snake</title>
-    </head>
-    <body>
-        <h1>PONTUAÇÃO</h1>
-        <h1 id="pontos">0</h1>
-        <canvas id="arena" width="600" height="600"></canvas>
+<html>    <head>
+    <title>Snake</title>
+</head>
+<body>
+    <h1>PONTUAÇÃO</h1>
+    <h1 id="pontos">0</h1>
+    <canvas id="arena" width="600" height="600"></canvas>
 
-        <script>
-            window.onabort = function (){
+    <script>
+        window.onabort = function (){
 
-                var canvas = document.getElementById('arena');
-                var pontuacao = document.getElementById('pontos');
-                var contexto = canvas.getContexto('2');
+            var canvas = document.getElementById('arena');
+            var pontuacao = document.getElementById('pontos');
+            var contexto = canvas.getContexto('2');
 
-                const velocidade = 1;
+            const velocidade = 1;
 
-                var velocidadex = 0;
-                var velocidadey = 0;
-                var jogadorx = 10;
-                var jogadory = 15;
-                var macax = 15;
-                var macay = 15;
-                var tamanhopeca = 20;
-                var quantidadepecas = 30;
+            var velocidadex = 0;
+            var velocidadey = 0;
+            var jogadorx = 10;
+            var jogadory = 15;
+            var macax = 15;
+            var macay = 15;
+            var tamanhopeca = 20;
+            var quantidadepecas = 30;
 
-                var pontos = 0;
+            var pontos = 0;
 
-                var rabo = [];
-                var rasto = 5;
+            var rabo = [];
+            var rasto = 5;
+
+            function jogo(){
+
+                jogadorx += velocidadex
+                jogadory += velocidadey
+
+                if (jogadorx < 0){
+                    jogadorx = quantidadepecas - 1;
+                
+                {
+                    if (jogadorx > quantidadepecas -1 ){
+                        jogadorx = 0;
+                    }
+                
+                if (jogadory < 0){
+                    jogadory = quantidadepecas - 1;
+                
+                {
+                    if (jogadory > quantidadepecas -1){
+                        jogadory = 0
+                    }
+
+
+                
 
             }
 
-        </script>
+        }
+
+    </script>
 
 
-    </body>
+</body>
 </html>
