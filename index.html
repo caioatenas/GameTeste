@@ -4,8 +4,35 @@
     </head>
     <body>
         <h1>PONTUAÇÃO</h1>
-        <h1>0</h1>
+        <h1 id="pontos">0</h1>
         <canvas id="arena" width="600" height="600"></canvas>
+
+        <script>
+            window.onabort = function (){
+
+                var canvas = document.getElementById('arena');
+                var pontuacao = document.getElementById('pontos');
+                var contexto = canvas.getContexto('2');
+
+                const velocidade = 1;
+
+                var velocidadex = 0;
+                var velocidadey = 0;
+                var jogadorx = 10;
+                var jogadory = 15;
+                var macax = 15;
+                var macay = 15;
+                var tamanhopeca = 20;
+                var quantidadepecas = 30;
+
+                var pontos = 0;
+
+                var rabo = [];
+                var rasto = 5;
+
+            }
+
+        </script>
 
 
     </body>
