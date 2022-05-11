@@ -1,4 +1,4 @@
-<html>   
+<html>
      <head>
     <title>Snake</title>
             </head>
@@ -70,10 +70,28 @@
                             pontuacao.innerHTML = pontos;
                         }
                     }
+
+                rabo.push({x:jogadorx, y:jogadory});
+                while(rabo.length > rasto){
+                    rabo.shift();
+                }
+            if(macax == jogadorx && macay == jogadory){
+                pontos ++
+                pontuacao.innerHTML = pontos;
+
+                rasto++;
+
+                macax = Math.floor(Math.random()*quantidadepecas);
+                macay = Math.floor(Math.random()*quantidadepecas);
+            }
+       
+       
+        }
         }
 
     </script>
 
 
 </body>
+
 </html>
