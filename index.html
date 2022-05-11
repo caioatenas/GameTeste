@@ -87,6 +87,28 @@
        
        
         }
+
+        document.addEventListener("keydown", movimento);
+        function movimento(event){
+            if(event.key ==  'ArrowUp'){
+                velocidadex = 0;
+                velocidadey = velocidade;
+            }
+            if(event.key == 'ArrowDown'){
+                velocidadex = 0;
+                velocidadey = velocidade;
+            }
+            if(event.key == 'ArrowLeft'){
+                velocidadex = 0;
+                velocidadey = velocidade;
+            }
+            if(event.key == 'ArrowRight'){
+                velocidadex = 0;
+                velocidadey = velocidade;
+            }
+
+        }
+
         }
 
     </script>
