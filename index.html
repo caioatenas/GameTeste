@@ -8,11 +8,11 @@
     <canvas id="arena" width="600" height="600"></canvas>
 
     <script>
-        window.onabort = function (){
+        window.onload = function (){
 
-            var canvas = document.getElementById('arena');
-            var pontuacao = document.getElementById('pontos');
-            var contexto = canvas.getContexto('2');
+            var canvas = document.getElementById("arena");
+            var pontuacao = document.getElementById("pontos");
+            var contexto = canvas.getContext("2d");
 
             const velocidade = 1;
 
@@ -32,8 +32,8 @@
 
             function jogo(){
 
-                jogadorx += velocidadex
-                jogadory += velocidadey
+                jogadorx += velocidadex;
+                jogadory += velocidadey;
 
                 if (jogadorx < 0){
                     jogadorx = quantidadepecas - 1;
@@ -90,21 +90,25 @@
 
         document.addEventListener("keydown", movimento);
         function movimento(event){
-            if(event.key ==  'ArrowUp'){
+            if(event.key == 'ArrowUp'){
                 velocidadex = 0;
-                velocidadey = velocidade;
+                velocidadey = - velocidade;
+                return
             }
             if(event.key == 'ArrowDown'){
                 velocidadex = 0;
                 velocidadey = velocidade;
+                return
             }
             if(event.key == 'ArrowLeft'){
-                velocidadex = 0;
-                velocidadey = velocidade;
+                velocidadey = 0;
+                velocidadex = - velocidade;
+                return
             }
             if(event.key == 'ArrowRight'){
-                velocidadex = 0;
-                velocidadey = velocidade;
+                velocidadey = 0;
+                velocidadex = velocidade;
+                return
             }
 
         }
