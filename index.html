@@ -1,7 +1,8 @@
-<html>    <head>
+<html>   
+     <head>
     <title>Snake</title>
-</head>
-<body>
+            </head>
+    <body>
     <h1>PONTUAÇÃO</h1>
     <h1 id="pontos">0</h1>
     <canvas id="arena" width="600" height="600"></canvas>
@@ -36,25 +37,39 @@
 
                 if (jogadorx < 0){
                     jogadorx = quantidadepecas - 1;
-                
-                {
-                    if (jogadorx > quantidadepecas -1 ){
-                        jogadorx = 0;
+                }
+                 if (jogadorx > quantidadepecas -1 ){
+                     jogadorx = 0;
                     }
                 
                 if (jogadory < 0){
                     jogadory = quantidadepecas - 1;
+                   }
                 
-                {
-                    if (jogadory > quantidadepecas -1){
-                        jogadory = 0
+                
+                if (jogadory > quantidadepecas -1){
+                     jogadory = 0
                     }
 
+                    contexto.fillStyle = "black";
+                    contexto.fillRect(0,0, canvas.width, canvas.heigth);
 
-                
+                    contexto.fillStyle -"red";
+                    contexto.fillRect(macax*tamanhopeca, macay*tamanhopeca, tamanhopeca, tamanhopeca);
+                    
+                    contexto.fillStyle = "grey";
+                    for(var i = 0; i < rabo.length; i++){
+                        contexto.fillRect(rabo[i].x*tamanhopeca, rabo[i].y*tamanhopeca, tamanhopeca - 1, tamanhopeca - 1);
+                        if (rabo[i].x == jogadorx && rabo[i].y == jogadory){
+                            velocidadex = 0;
+                            velocidadey = 0;
 
-            }
+                            pontos = 0;
+                            rasto = 5;
 
+                            pontuacao.innerHTML = pontos;
+                        }
+                    }
         }
 
     </script>
